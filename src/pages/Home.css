@@ -1,0 +1,542 @@
+.home {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff7ed;
+  text-align: center;
+  z-index: 2;
+}
+
+/* UPDATED HERO STYLES */
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  color: #fff7ed;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #f7eee2;
+  margin-bottom: 25px;
+  animation: fadeIn 2s ease-in;
+}
+
+.hero-text button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #e76f51;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(231, 111, 81, 0.5);
+  transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+  background-color: #d85e43;
+  transform: scale(1.05);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------- OTHER STYLES -------------------- */
+
+.teaser {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff7ed;
+}
+
+.teaser h2 {
+  margin-bottom: 20px;
+}
+
+.product-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.product-scroll img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about {
+  padding: 60px 20px;
+  background: white;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 10px;
+}
+
+.about p {
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+.about button {
+  padding: 10px 20px;
+  background: #e76f51;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* -------------------- HONEY DNA -------------------- */
+
+.honey-dna {
+  padding: 60px 20px;
+  background: #fff7ed;
+  text-align: center;
+}
+
+.honey-dna h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.dna-subtext {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.dna-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dna-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+.dna-card:hover {
+  transform: scale(1.03);
+}
+
+.dna-card h4 {
+  color: #e76f51;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered DNA animation delays */
+.dna-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.dna-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dna-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.dna-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.dna-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Responsive DNA Grid */
+@media (max-width: 768px) {
+  .dna-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .dna-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+.tagline-typewriter {
+  font-size: 1.4rem;
+  color: #f7eee2;
+  margin-bottom: 25px;
+  min-height: 40px;
+}
+
+.fade-in-button {
+  opacity: 0;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #e76f51;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(231, 111, 81, 0.5);
+  animation: fadeInBtn 0.6s ease-in forwards;
+  animation-delay: 2s;
+}
+
+.fade-in-button:hover {
+  background-color: #d85e43;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInBtn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Bestsellers Section ---------- */
+
+.bestsellers {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.bestsellers h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 800;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.bestsellers h2::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 80px;
+  background: #e76f51;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.product-scroll {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.product-scroll img {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bestseller-link {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.bestseller-link:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- SUBSCRIPTION SECTION ---------- */
+.subscribe-banner {
+  padding: 60px 20px;
+  background: #fef6f1;
+  text-align: center;
+}
+
+.subscribe-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.subscribe-left {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.subscribe-left h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subscribe-left p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* ---------- SUBSCRIPTION WITH BACKGROUND ---------- */
+.subscribe-banner {
+  background: #fef6f1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.subscribe-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.subscribe-left {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.subscribe-left h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subscribe-left p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.subscribe-form {
+  display: flex;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.subscribe-form input {
+  flex: 1;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.subscribe-form button {
+  background: #e76f51;
+  color: white;
+  border: none;
+  padding: 0 24px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background: #d85e43;
+}
+
+.subscribe-right {
+  flex: 1;
+  min-width: 300px;
+  text-align: right;
+}
+
+.subscribe-right img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.benefits-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  color: #444;
+}
+
+.benefit span {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+  .subscribe-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subscribe-left, .subscribe-right {
+    text-align: center;
+  }
+}
+
+.site-footer {
+  background-color: #fff1e6;
+  padding: 60px 20px 40px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+  border-top: 1px solid #f0e0ce;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.footer-tagline {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #e76f51;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.green-text {
+  color: #2e7d32;
+  font-weight: 600;
+  transition: border-bottom 0.3s;
+}
+
+.blue-text {
+  color: #1976d2;
+  font-weight: 600;
+  transition: border-bottom 0.3s;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

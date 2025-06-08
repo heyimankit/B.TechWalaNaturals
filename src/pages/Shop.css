@@ -1,0 +1,149 @@
+.shop-container {
+  display: flex;
+  background: #fff7ed;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ========== SIDEBAR (Catalog Bar) ========== */
+.sidebar {
+  width: 500px;
+  padding: 40px 30px;
+  background-color: #fff;
+  border-right: 1px solid #e0d5be;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.sidebar h3 {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.clear-filters {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #e76f51;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.clear-filters:hover {
+  background-color: #fff0e6;
+  border: 1px solid #e76f51;
+  color: #e76f51;
+}
+
+.filter-section {
+  margin-bottom: 30px;
+}
+
+.filter-section strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.filter-section strong:hover {
+  color: #e76f51;
+  transform: translateX(4px);
+}
+
+.filter-section label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.filter-section label:hover {
+  color: #e76f51;
+}
+
+.filter-section input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #e76f51;
+  cursor: pointer;
+}
+
+/* ========== MAIN PRODUCT AREA ========== */
+.product-section {
+  flex: 1;
+  padding: 50px 40px;
+}
+
+/* ========== TOP CONTROL BAR ========== */
+.product-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.product-controls > div {
+  font-size: 1rem;
+  color: #555;
+}
+
+.search-input {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 250px;
+}
+
+/* ========== PRODUCT GRID (2 cards per row) ========== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .shop-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0d5be;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sort-dropdown {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  min-width: 180px;
+}
